@@ -36,18 +36,18 @@ function lintCommitMessages (opts = {}) {
         const firstLine = `${report.input.trim().split('\n')[0]}`.trim()
 
         if (!report.valid) {
-          console.log(`Commit message '${firstLine}' failed validation:`)
-          console.log('')
+          console.log(`Commit message '${firstLine}' failed validation:`) // eslint-disable-line no-console
+          console.log('') // eslint-disable-line no-console
 
           report.errors.forEach(error => {
-            console.log('  [ERROR]', `${error.name}:`, error.message)
+            console.log('  [ERROR]', `${error.name}:`, error.message) // eslint-disable-line no-console
           })
 
           report.warnings.forEach(warning => {
-            console.log('  [WARNING]', `${warning.name}:`, warning.message)
+            console.log('  [WARNING]', `${warning.name}:`, warning.message) // eslint-disable-line no-console
           })
 
-          console.log('')
+          console.log('') // eslint-disable-line no-console
         }
       })
 
